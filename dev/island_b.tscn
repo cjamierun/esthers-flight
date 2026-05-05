@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dxkgdit0d4oiu"]
+
+[ext_resource type="Terrain3DMaterial" uid="uid://uo61huy31c48" path="res://dev/Island B Terrain3D/new_terrain_3d_material.tres" id="1_ulikt"]
+[ext_resource type="Terrain3DAssets" uid="uid://wpjan1y6r04f" path="res://dev/Island B Terrain3D/new_terrain_3d_assets.tres" id="2_0rxin"]
+
+[node name="Island B" type="Node3D" unique_id=322274361]
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=1940188596]
+material = ExtResource("1_ulikt")
+assets = ExtResource("2_0rxin")
+show_checkered = true
+top_level = true
+metadata/_edit_lock_ = true
