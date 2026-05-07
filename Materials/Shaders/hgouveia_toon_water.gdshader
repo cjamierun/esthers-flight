@@ -1,10 +1,3 @@
-/**
-* Ported from the original unity shader by Erik Roystan Ross
-* https://roystan.net/articles/toon-water.html
-* https://github.com/IronWarrior/ToonWaterShader
-* Camera Depth taken from Bastiaan Olij's video on: https://www.youtube.com/watch?v=Jq3he9Lbj7M
-*/
-
 shader_type spatial;
 
 const float SMOOTHSTEP_AA = 0.01;
@@ -70,14 +63,13 @@ void fragment(){
 	vec2 distortAmount = (distortNoiseSample.xy * 2.0 -1.0) * surface_distortion_amount;
 	
 	vec2 noise_uv = vec2(
-		(noiseUV.x + TIME * surface_noise_scroll.x) + distortAmount.x , 
-		(noiseUV.y + TIME * surface_noise_scroll.y + distortAmount.y)
+		(noiseUV.x + TIME * 0.1 * surface_noise_scroll.x) + distortAmount.x , 
+		(noiseUV.y + TIME * 0.1 * surface_noise_scroll.y + distortAmount.y)
 	);
 	float surfaceNoiseSample = texture(surfaceNoise, noise_uv).r;
 	float surfaceNoiseAmount = smoothstep(surfaceNoiseCutoff - SMOOTHSTEP_AA, surfaceNoiseCutoff + SMOOTHSTEP_AA, surfaceNoiseSample);
 	
 	float waterDepth = clamp(water_thickness / _DepthMaxDistance, 0.0, 1.0) * _DepthFactor;
-	//float waterDepth = clamp(linear_depth / _DepthMaxDistance, 0.0, 1.0) * _DepthFactor;
 	vec4 waterColor = mix(_DepthGradientShallow, _DepthGradientDeep, waterDepth);
 
 	vec4 surfaceNoiseColor = foam_color;
@@ -85,6 +77,5 @@ void fragment(){
 	vec4 color = alphaBlend(surfaceNoiseColor, waterColor);
 	
 	ALBEDO = color.rgb;
-	//ALBEDO = vec3(foamDepth, foamDepth, foamDepth).rgb;
 	ALPHA = color.a;
 }

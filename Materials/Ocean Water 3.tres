@@ -14,6 +14,7 @@ seamless = true
 [sub_resource type="Gradient" id="Gradient_vwnqk"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6rgma"]
+frequency = 0.0702
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fi3wh"]
 noise = SubResource("FastNoiseLite_6rgma")
@@ -35,8 +36,8 @@ shader_parameter/foam_color = Color(1, 1, 1, 1)
 shader_parameter/surface_noise_tiling = Vector2(14, 18)
 shader_parameter/surface_noise_scroll = Vector3(0.03, 0.03, 0)
 shader_parameter/surface_noise_cutoff = 0.777
-shader_parameter/surface_distortion_amount = 0.27
+shader_parameter/surface_distortion_amount = 0.0070000003325
 shader_parameter/_DepthGradientShallow = Color(0.325, 0.807, 0.971, 0.725)
-shader_parameter/_DepthGradientDeep = Color(0.086, 0.407, 1, 0.749)
-shader_parameter/_DepthMaxDistance = 14.506000689035
+shader_parameter/_DepthGradientDeep = Color(0.08627451, 0.40784314, 1, 1)
+shader_parameter/_DepthMaxDistance = 9.246000439185
 shader_parameter/_DepthFactor = 1.0
