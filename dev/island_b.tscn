@@ -2,12 +2,25 @@
 
 [ext_resource type="Terrain3DMaterial" uid="uid://uo61huy31c48" path="res://dev/Island B Terrain3D/new_terrain_3d_material.tres" id="1_ulikt"]
 [ext_resource type="Terrain3DAssets" uid="uid://wpjan1y6r04f" path="res://dev/Island B Terrain3D/new_terrain_3d_assets.tres" id="2_0rxin"]
+[ext_resource type="Material" uid="uid://ic0qvoytm7d5" path="res://Materials/Shaders/Ocean Water.tres" id="3_0rxin"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ulikt"]
+lightmap_size_hint = Vector2i(50002, 50002)
+material = ExtResource("3_0rxin")
+size = Vector2(10000, 10000)
+subdivide_width = 200
+subdivide_depth = 200
 
 [node name="Island B" type="Node3D" unique_id=322274361]
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1940188596]
+data_directory = "res://dev/Island B Terrain3D"
 material = ExtResource("1_ulikt")
 assets = ExtResource("2_0rxin")
 show_checkered = true
 top_level = true
 metadata/_edit_lock_ = true
+
+[node name="Ocean" type="MeshInstance3D" parent="." unique_id=847089103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 10, 150)
+mesh = SubResource("PlaneMesh_ulikt")
