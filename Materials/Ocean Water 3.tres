@@ -5,38 +5,40 @@
 [sub_resource type="Gradient" id="Gradient_665b0"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_1f1hx"]
+noise_type = 3
+frequency = 0.64
+offset = Vector3(0, 32.26, -118.49)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_05mdy"]
 noise = SubResource("FastNoiseLite_1f1hx")
 color_ramp = SubResource("Gradient_665b0")
 seamless = true
-
-[sub_resource type="Gradient" id="Gradient_vwnqk"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_6rgma"]
-frequency = 0.0702
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fi3wh"]
-noise = SubResource("FastNoiseLite_6rgma")
-color_ramp = SubResource("Gradient_vwnqk")
-seamless = true
-invert = true
 in_3d_space = true
+
+[sub_resource type="Gradient" id="Gradient_1f1hx"]
+offsets = PackedFloat32Array(0, 0.4133574, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.16787003, 0.16787003, 0.16787003, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_05mdy"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vwnqk"]
+noise = SubResource("FastNoiseLite_05mdy")
+color_ramp = SubResource("Gradient_1f1hx")
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_665b0")
-shader_parameter/surfaceNoise = SubResource("NoiseTexture2D_fi3wh")
+shader_parameter/surfaceNoise = SubResource("NoiseTexture2D_vwnqk")
 shader_parameter/distortNoise = SubResource("NoiseTexture2D_05mdy")
 shader_parameter/beer_factor = 0.8
 shader_parameter/foam_distance = 0.01
 shader_parameter/foam_max_distance = 1.76
 shader_parameter/foam_min_distance = 0.04
 shader_parameter/foam_color = Color(1, 1, 1, 1)
-shader_parameter/surface_noise_tiling = Vector2(14, 18)
+shader_parameter/surface_noise_tiling = Vector2(30, 30)
 shader_parameter/surface_noise_scroll = Vector3(0.03, 0.03, 0)
 shader_parameter/surface_noise_cutoff = 0.777
-shader_parameter/surface_distortion_amount = 0.0070000003325
+shader_parameter/surface_distortion_amount = 0.21200001007
 shader_parameter/_DepthGradientShallow = Color(0.325, 0.807, 0.971, 0.725)
 shader_parameter/_DepthGradientDeep = Color(0.08627451, 0.40784314, 1, 1)
 shader_parameter/_DepthMaxDistance = 9.246000439185
