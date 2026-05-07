@@ -19,13 +19,13 @@ seamless = true
 [resource]
 render_priority = 0
 shader = ExtResource("1_w4gql")
-shader_parameter/time_speed = 0.01
+shader_parameter/time_speed = 0.002
 shader_parameter/surface_speed = 1.0
-shader_parameter/spin = 1.0
+shader_parameter/spin = 0.0
 shader_parameter/brightness = 0.6
 shader_parameter/color_intensity = 0.0
-shader_parameter/horizontal_frequency = 2.0
-shader_parameter/vertical_frequency = 2.0
+shader_parameter/horizontal_frequency = 15.0
+shader_parameter/vertical_frequency = 15.0
 shader_parameter/size = 3.0
 shader_parameter/banding_bias = 0.705
 shader_parameter/wave_texture = SubResource("NoiseTexture2D_1jjpp")

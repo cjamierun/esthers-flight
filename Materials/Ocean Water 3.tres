@@ -1,0 +1,42 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c2hnrlghafvu4"]
+
+[ext_resource type="Shader" uid="uid://bhqrmkavg8mcc" path="res://Materials/Shaders/hgouveia_toon_water.gdshader" id="1_665b0"]
+
+[sub_resource type="Gradient" id="Gradient_665b0"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1f1hx"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_05mdy"]
+noise = SubResource("FastNoiseLite_1f1hx")
+color_ramp = SubResource("Gradient_665b0")
+seamless = true
+
+[sub_resource type="Gradient" id="Gradient_vwnqk"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6rgma"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fi3wh"]
+noise = SubResource("FastNoiseLite_6rgma")
+color_ramp = SubResource("Gradient_vwnqk")
+seamless = true
+invert = true
+in_3d_space = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_665b0")
+shader_parameter/surfaceNoise = SubResource("NoiseTexture2D_fi3wh")
+shader_parameter/distortNoise = SubResource("NoiseTexture2D_05mdy")
+shader_parameter/beer_factor = 0.8
+shader_parameter/foam_distance = 0.01
+shader_parameter/foam_max_distance = 1.76
+shader_parameter/foam_min_distance = 0.04
+shader_parameter/foam_color = Color(1, 1, 1, 1)
+shader_parameter/surface_noise_tiling = Vector2(14, 18)
+shader_parameter/surface_noise_scroll = Vector3(0.03, 0.03, 0)
+shader_parameter/surface_noise_cutoff = 0.777
+shader_parameter/surface_distortion_amount = 0.27
+shader_parameter/_DepthGradientShallow = Color(0.325, 0.807, 0.971, 0.725)
+shader_parameter/_DepthGradientDeep = Color(0.086, 0.407, 1, 0.749)
+shader_parameter/_DepthMaxDistance = 14.506000689035
+shader_parameter/_DepthFactor = 1.0

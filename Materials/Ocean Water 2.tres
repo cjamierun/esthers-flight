@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dvshi7oif48d6"]
+
+[ext_resource type="Shader" uid="uid://wf1g3gi0jx3e" path="res://Materials/Shaders/dairycultist_toon_water.gdshader" id="1_7alj6"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_7alj6")
+shader_parameter/slide_speed = 0.3
+shader_parameter/wobble_speed = 1.0
+shader_parameter/wobble_intensity = 0.4
+shader_parameter/texture_scale = 0.2
