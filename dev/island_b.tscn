@@ -17,7 +17,6 @@ subdivide_depth = 200
 data_directory = "res://dev/Island B Terrain3D"
 material = ExtResource("1_ulikt")
 assets = ExtResource("2_0rxin")
-show_checkered = true
 top_level = true
 metadata/_edit_lock_ = true
 

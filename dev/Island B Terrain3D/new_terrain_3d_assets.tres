@@ -1,5 +1,8 @@
 [gd_resource type="Terrain3DAssets" format=3 uid="uid://wpjan1y6r04f"]
 
+[ext_resource type="Texture2D" uid="uid://d3mia2y4ijh2k" path="res://Materials/Packed Textures/sand2_packed_albedo_height.png" id="1_i48uo"]
+[ext_resource type="Texture2D" uid="uid://do4jfutovhg46" path="res://Materials/Packed Textures/sand2_packed_normal_roughness.png" id="2_wux7i"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwqr2"]
 transparency = 4
 cull_mode = 2
@@ -18,5 +21,15 @@ last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_2dm88"]
+name = "Sand"
+albedo_texture = ExtResource("1_i48uo")
+normal_texture = ExtResource("2_wux7i")
+normal_depth = 0.653
+roughness = 1.0
+detiling_rotation = 0.225
+detiling_shift = 0.5
+
 [resource]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_2285x")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_2dm88")])
