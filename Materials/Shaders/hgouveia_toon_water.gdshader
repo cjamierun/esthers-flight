@@ -1,3 +1,7 @@
+// Stylized Toon Ocean Shader
+// Author: Jamie Crane
+// Based on Stylized Toon Water Shader by Thundergecko8 and Toon Water Shader by hgvoueia
+
 shader_type spatial;
 
 const float SMOOTHSTEP_AA = 0.01;
@@ -22,6 +26,9 @@ uniform vec4 _DepthGradientShallow: source_color = vec4(0.325, 0.807, 0.971, 0.7
 uniform vec4 _DepthGradientDeep: source_color = vec4(0.086, 0.407, 1, 0.749);
 uniform float _DepthMaxDistance: hint_range(0, 20) = 1.0;
 uniform float _DepthFactor = 1.0;
+
+uniform vec4 _FresnelGradientColor: source_color = vec4(0.186, 0.507, 1, 1);
+uniform float _FresnelBias: hint_range(-0.3, 0.3, 0.01) = 0;
 
 varying vec2 noiseUV;
 varying vec2 distortUV;
@@ -54,8 +61,8 @@ void fragment(){
 	float water_thickness = linear_depth + VERTEX.z; 
 	
 	float normalDot = dot(NORMAL, VIEW);
-	float foamDistance = mix(foam_max_distance, foam_min_distance, normalDot);
 	
+	float foamDistance = mix(foam_max_distance, foam_min_distance, normalDot);
 	float foamDepth = clamp(water_thickness / foamDistance, 0.0, 1.0);
 	float surfaceNoiseCutoff = foamDepth * surface_noise_cutoff;
 	
@@ -71,6 +78,16 @@ void fragment(){
 	
 	float waterDepth = clamp(water_thickness / _DepthMaxDistance, 0.0, 1.0) * _DepthFactor;
 	vec4 waterColor = mix(_DepthGradientShallow, _DepthGradientDeep, waterDepth);
+	
+	// Add fresnel banding
+	float normal_facing = normalDot + (surfaceNoiseSample-0.5+_FresnelBias) * 0.3;
+	float band = normal_facing * 3.0 * 1000.0;
+	//if (band <= 1.5) {
+		//discard;
+	//}
+	if(band <= 2.0){
+		waterColor = mix(_FresnelGradientColor, waterColor, -0.01 / (band-2.01)); //Mixes the color bands to make a slight gradient
+	}
 
 	vec4 surfaceNoiseColor = foam_color;
     surfaceNoiseColor.a *= surfaceNoiseAmount;
