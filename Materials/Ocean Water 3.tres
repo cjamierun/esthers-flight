@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://c2hnrlghafvu4"]
 
-[ext_resource type="Shader" uid="uid://bhqrmkavg8mcc" path="res://Materials/Shaders/hgouveia_toon_water.gdshader" id="1_665b0"]
+[ext_resource type="Shader" uid="uid://bhqrmkavg8mcc" path="res://Materials/Shaders/jamies_ocean_shader.gdshader" id="1_665b0"]
 
 [sub_resource type="Gradient" id="Gradient_665b0"]
 

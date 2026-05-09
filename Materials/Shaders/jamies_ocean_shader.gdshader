@@ -1,6 +1,7 @@
-// Stylized Toon Ocean Shader
+// Title: Jamie's Toon Ocean Shader
 // Author: Jamie Crane
 // Based on Stylized Toon Water Shader by Thundergecko8 and Toon Water Shader by hgvoueia
+// Godot version: 4.6.2.stable (4.6+ likely works)
 
 shader_type spatial;
 
