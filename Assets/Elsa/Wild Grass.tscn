@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d3w31glnm0j1h"]
+
+[ext_resource type="ArrayMesh" uid="uid://dybfur0rondmh" path="res://Import/Elsa/elsa-wild-grass2.res" id="1_v2p63"]
+
+[node name="WildGrass" type="Node3D" unique_id=504361747]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1254339554]
+cast_shadow = 0
+mesh = ExtResource("1_v2p63")

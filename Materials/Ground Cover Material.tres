@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://du00ycirabnka"]
+
+[ext_resource type="Texture2D" uid="uid://dfdjx8p4v24t7" path="res://Import/Elsa/elsa_environment_set_esther-gradient-palette_buffer.png" id="1_u8go0"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_u8go0")
+disable_receive_shadows = true

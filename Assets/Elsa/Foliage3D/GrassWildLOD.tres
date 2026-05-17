@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FoliageLOD" format=3 uid="uid://cc4rvk701f4j3"]
+
+[ext_resource type="Script" uid="uid://cpa84ufg28t5e" path="res://addons/foliage_3d/foliage_mesh.gd" id="1_86ag1"]
+[ext_resource type="Script" uid="uid://bvo1pr4gs1s45" path="res://addons/foliage_3d/foliage_lod.gd" id="2_v6bya"]
+[ext_resource type="Resource" uid="uid://jgm28scttfx0" path="res://Assets/Elsa/Foliage3D/GrassWildMesh.tres" id="2_w5e3d"]
+
+[resource]
+script = ExtResource("2_v6bya")
+meshes = Array[ExtResource("1_86ag1")]([ExtResource("2_w5e3d")])
+metadata/_custom_type_script = "uid://bvo1pr4gs1s45"

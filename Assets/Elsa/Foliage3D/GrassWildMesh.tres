@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FoliageMesh" format=3 uid="uid://jgm28scttfx0"]
+
+[ext_resource type="ArrayMesh" uid="uid://lx5y65s1eivf" path="res://Import/Elsa/elsa-wild-grass2.res" id="1_4jfc4"]
+[ext_resource type="Material" uid="uid://ljo1wt61kbkq" path="res://addons/terrain_3d/extras/particle_example/grass_material.tres" id="1_bo2f8"]
+[ext_resource type="Script" uid="uid://cpa84ufg28t5e" path="res://addons/foliage_3d/foliage_mesh.gd" id="2_bo2f8"]
+
+[resource]
+script = ExtResource("2_bo2f8")
+mesh = ExtResource("1_4jfc4")
+material_overrides = Array[Material]([ExtResource("1_bo2f8")])
+metadata/_custom_type_script = "uid://cpa84ufg28t5e"

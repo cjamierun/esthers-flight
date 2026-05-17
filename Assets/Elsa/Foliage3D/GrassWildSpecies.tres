@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FoliageSpecies" format=3 uid="uid://unoet6a3868l"]
+
+[ext_resource type="Resource" uid="uid://bhgj843vvk3ra" path="res://Assets/Elsa/Foliage3D/GrassWildAsset.tres" id="1_a81bo"]
+[ext_resource type="Script" uid="uid://c67t7yfjqdgnt" path="res://addons/foliage_3d/foliage_species.gd" id="2_edxc5"]
+
+[resource]
+script = ExtResource("2_edxc5")
+asset = ExtResource("1_a81bo")
+abundance = 1.0
+metadata/_custom_type_script = "uid://c67t7yfjqdgnt"

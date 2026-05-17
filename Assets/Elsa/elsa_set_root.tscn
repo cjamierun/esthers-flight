@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b4l68d2ldxlbj"]
+
+[ext_resource type="PackedScene" uid="uid://df4lc8tao7rq4" path="res://Import/Elsa/elsa_environment_set.glb" id="1_1qjjm"]
+[ext_resource type="Material" uid="uid://du00ycirabnka" path="res://Materials/Ground Cover Material.tres" id="2_calku"]
+
+[node name="Elsa set root" type="Node3D" unique_id=538915879]
+
+[node name="Elsa set" parent="." unique_id=1641513536 instance=ExtResource("1_1qjjm")]
+
+[node name="Grasses" parent="Elsa set" index="0" unique_id=1788992289]
+surface_material_override/0 = ExtResource("2_calku")
+
+[editable path="Elsa set"]

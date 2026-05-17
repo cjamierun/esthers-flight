@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FoliageLayer" format=3 uid="uid://cwn04ua5pluo2"]
+
+[ext_resource type="Script" uid="uid://cwxnpnnp55y2r" path="res://addons/foliage_3d/foliage_layer.gd" id="1_eninp"]
+[ext_resource type="Script" uid="uid://c67t7yfjqdgnt" path="res://addons/foliage_3d/foliage_species.gd" id="2_c4uta"]
+[ext_resource type="Resource" uid="uid://unoet6a3868l" path="res://Assets/Elsa/Foliage3D/GrassWildSpecies.tres" id="3_c4uta"]
+
+[resource]
+script = ExtResource("1_eninp")
+species = Array[ExtResource("2_c4uta")]([ExtResource("3_c4uta")])
+metadata/_custom_type_script = "uid://cwxnpnnp55y2r"

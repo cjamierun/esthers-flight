@@ -3,6 +3,10 @@
 [ext_resource type="Terrain3DMaterial" uid="uid://uo61huy31c48" path="res://dev/Island B Terrain3D/new_terrain_3d_material.tres" id="1_ulikt"]
 [ext_resource type="Terrain3DAssets" uid="uid://wpjan1y6r04f" path="res://dev/Island B Terrain3D/new_terrain_3d_assets.tres" id="2_0rxin"]
 [ext_resource type="Material" uid="uid://c2hnrlghafvu4" path="res://Materials/Ocean Water 3.tres" id="3_0rxin"]
+[ext_resource type="PackedScene" uid="uid://d3w31glnm0j1h" path="res://Assets/Elsa/Wild Grass.tscn" id="4_kymhj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kymhj"]
+size = Vector3(0.5, 1.35, 0.5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ulikt"]
 lightmap_size_hint = Vector2i(50002, 50002)
@@ -20,7 +24,57 @@ assets = ExtResource("2_0rxin")
 top_level = true
 metadata/_edit_lock_ = true
 
+[node name="TestEsther" type="MeshInstance3D" parent="." unique_id=321188079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.7, 12.5, 320.6)
+mesh = SubResource("BoxMesh_kymhj")
+
 [node name="Ocean" type="MeshInstance3D" parent="." unique_id=847089103]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 10, 150)
 mesh = SubResource("PlaneMesh_ulikt")
 metadata/_edit_lock_ = true
+
+[node name="Grasses test" type="Node3D" parent="." unique_id=1574038911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226, 12, 321)
+visible = false
+
+[node name="WildGrass" parent="Grasses test" unique_id=504361747 instance=ExtResource("4_kymhj")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 0, 0, 0)
+
+[node name="WildGrass2" parent="Grasses test" unique_id=1592758467 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 0, 0, 1)
+
+[node name="WildGrass3" parent="Grasses test" unique_id=1923829068 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 1, 0, 0)
+
+[node name="WildGrass4" parent="Grasses test" unique_id=306621238 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 0.5, 0, 0.5)
+
+[node name="Grasses test2" type="Node3D" parent="Grasses test" unique_id=1181315276]
+transform = Transform3D(-0.819152, 0, -0.5735765, 0, 1, 0, 0.5735765, 0, -0.819152, 1.199997, -0.19999981, 0.8000183)
+
+[node name="WildGrass" parent="Grasses test/Grasses test2" unique_id=236441426 instance=ExtResource("4_kymhj")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 0, 0, 0)
+
+[node name="WildGrass2" parent="Grasses test/Grasses test2" unique_id=1836358961 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 0, 0, 1)
+
+[node name="WildGrass3" parent="Grasses test/Grasses test2" unique_id=977453710 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.5000001, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.5000001, 0.32800293, 0, 1.482666)
+
+[node name="WildGrass4" parent="Grasses test/Grasses test2" unique_id=112617813 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.25881898, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881898, -0.032546997, 0, 0.7374878)
+
+[node name="Grasses test3" type="Node3D" parent="Grasses test" unique_id=1925812075]
+transform = Transform3D(0.34202003, 0, 0.9396926, 0, 1, 0, -0.9396926, 0, 0.34202003, -0.7000122, -0.19999981, 1.0000305)
+
+[node name="WildGrass" parent="Grasses test/Grasses test3" unique_id=1891858480 instance=ExtResource("4_kymhj")]
+transform = Transform3D(0.5, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.5, 0.31645203, 0, 1.1618347)
+
+[node name="WildGrass2" parent="Grasses test/Grasses test3" unique_id=535963751 instance=ExtResource("4_kymhj")]
+transform = Transform3D(0.5000001, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.5000001, 1.4098969, 0, 1.6574402)
+
+[node name="WildGrass3" parent="Grasses test/Grasses test3" unique_id=236788450 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 1, 0, 0)
+
+[node name="WildGrass4" parent="Grasses test/Grasses test3" unique_id=286411948 instance=ExtResource("4_kymhj")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 0.5, 0, 0.5)
