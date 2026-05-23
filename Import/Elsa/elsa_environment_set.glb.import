@@ -48,6 +48,15 @@ _subresources={
 "save_to_file/fallback_path": "res://Import/Elsa/elsa-wild-grass2.res",
 "save_to_file/path": "uid://lx5y65s1eivf"
 },
+"Elsa set_Cube": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Import/Elsa/elsa-wild-bush-a.res",
+"save_to_file/path": "uid://dfts72ugsypjn"
+},
 "Elsa set_Plane_001": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
@@ -59,11 +68,20 @@ _subresources={
 }
 },
 "nodes": {
+"PATH:Empty": {
+"import/skip_import": true
+},
+"PATH:Foliage card": {
+"import/skip_import": true
+},
 "PATH:Grass": {
 "import/skip_import": true
 },
 "PATH:Grasses": {
 "mesh_instance/cast_shadow": 0
+},
+"PATH:normals tranfer target": {
+"import/skip_import": true
 }
 }
 }
