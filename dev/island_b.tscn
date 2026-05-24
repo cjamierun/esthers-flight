@@ -3,6 +3,7 @@
 [ext_resource type="Terrain3DMaterial" uid="uid://uo61huy31c48" path="res://dev/Island B Terrain3D/new_terrain_3d_material.tres" id="1_ulikt"]
 [ext_resource type="Terrain3DAssets" uid="uid://wpjan1y6r04f" path="res://dev/Island B Terrain3D/new_terrain_3d_assets.tres" id="2_0rxin"]
 [ext_resource type="Material" uid="uid://c2hnrlghafvu4" path="res://Materials/Ocean Water 3.tres" id="3_0rxin"]
+[ext_resource type="ArrayMesh" uid="uid://bev36slfimbd3" path="res://Import/Elsa/elsa-tree-1.res" id="3_3ekgd"]
 [ext_resource type="PackedScene" uid="uid://d3w31glnm0j1h" path="res://Assets/Elsa/Wild Grass.tscn" id="4_kymhj"]
 [ext_resource type="PackedScene" uid="uid://dtc8l0qljkiaa" path="res://Assets/Elsa/elsa_wild_bush_b_a.tscn" id="5_ou4ju"]
 [ext_resource type="PackedScene" uid="uid://dw47o4l64hqrl" path="res://Assets/Elsa/elsa_wild_bush_b_b.tscn" id="6_3ekgd"]
@@ -25,6 +26,10 @@ material = ExtResource("1_ulikt")
 assets = ExtResource("2_0rxin")
 top_level = true
 metadata/_edit_lock_ = true
+
+[node name="Elsa Tree 1 test" type="MeshInstance3D" parent="." unique_id=2106513493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.7, 12.2, 320.6)
+mesh = ExtResource("3_3ekgd")
 
 [node name="TestEsther" type="MeshInstance3D" parent="." unique_id=321188079]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.7, 12.5, 320.6)

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1vcmnkxuff5f"]
+
+[ext_resource type="Texture2D" uid="uid://dmuf8w83pmppd" path="res://Import/Elsa/elsa_environment_set_esther-tree-foliage-1_albedo.png" id="1_ws7ue"]
+
+[resource]
+resource_name = "esther-tree-foliage-1_albedo"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ws7ue")
+disable_receive_shadows = true

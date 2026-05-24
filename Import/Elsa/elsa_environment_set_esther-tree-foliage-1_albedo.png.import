@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b56l82sj1bvc"
-path.s3tc="res://.godot/imported/elsa_environment_set_esther-bush-leaves-2_albedo.png-07be3a6de5e9885d885860a8d7c21219.s3tc.ctex"
+uid="uid://dmuf8w83pmppd"
+path.s3tc="res://.godot/imported/elsa_environment_set_esther-tree-foliage-1_albedo.png-96966b8500f3faf0b378a19f4f496ef5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "90f815fee3117d0ca751b7bc50d84800"
+"md5": "40a41c973fd2a15ac0a123aacdda6275"
 }
 
 [deps]
 
-source_file="res://Import/Elsa/elsa_environment_set_esther-bush-leaves-2_albedo.png"
-dest_files=["res://.godot/imported/elsa_environment_set_esther-bush-leaves-2_albedo.png-07be3a6de5e9885d885860a8d7c21219.s3tc.ctex"]
+source_file="res://Import/Elsa/elsa_environment_set_esther-tree-foliage-1_albedo.png"
+dest_files=["res://.godot/imported/elsa_environment_set_esther-tree-foliage-1_albedo.png-96966b8500f3faf0b378a19f4f496ef5.s3tc.ctex"]
 
 [params]
 
