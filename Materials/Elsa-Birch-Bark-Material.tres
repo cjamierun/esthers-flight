@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djfl56tvxp44m"]
+
+[ext_resource type="Texture2D" uid="uid://ch1xcbjt3mubd" path="res://Import/Textures/esther-birch-bark-1_albedo.png" id="1_hmhbw"]
+
+[resource]
+albedo_texture = ExtResource("1_hmhbw")
