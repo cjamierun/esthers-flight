@@ -65,10 +65,43 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://Import/Elsa/elsa-wild-grass.res",
 "save_to_file/path": "uid://cu6lf4arcilod"
+},
+"Elsa set_Sphere_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Import/Elsa/elsa-wild-bush-b-a.res",
+"save_to_file/path": "uid://elrolq6wimor"
+},
+"Elsa set_Sphere_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Import/Elsa/elsa-wild-bush-b-b.res",
+"save_to_file/path": "uid://cedyyamoxk854"
 }
 },
 "nodes": {
-"PATH:Empty": {
+"PATH:Bush B X-card AA": {
+"import/skip_import": true
+},
+"PATH:Bush B X-card AB": {
+"import/skip_import": true
+},
+"PATH:Bush B X-card BB": {
+"import/skip_import": true
+},
+"PATH:Bush B card A": {
+"import/skip_import": true
+},
+"PATH:Bush B card B": {
+"import/skip_import": true
+},
+"PATH:Bush B generator": {
 "import/skip_import": true
 },
 "PATH:Foliage card": {

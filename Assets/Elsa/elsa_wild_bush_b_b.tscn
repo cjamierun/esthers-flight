@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dw47o4l64hqrl"]
+
+[ext_resource type="Material" uid="uid://84xw3w2frbh8" path="res://Materials/Bush B material.tres" id="1_03hj5"]
+[ext_resource type="ArrayMesh" uid="uid://cedyyamoxk854" path="res://Import/Elsa/elsa-wild-bush-b-b.res" id="2_21nyx"]
+
+[node name="ElsaWildBushB-B" type="MeshInstance3D" unique_id=61360521]
+material_override = ExtResource("1_03hj5")
+cast_shadow = 0
+mesh = ExtResource("2_21nyx")

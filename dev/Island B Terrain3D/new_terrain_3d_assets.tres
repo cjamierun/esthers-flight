@@ -3,14 +3,38 @@
 [ext_resource type="PackedScene" uid="uid://d3w31glnm0j1h" path="res://Assets/Elsa/Wild Grass.tscn" id="1_2dm88"]
 [ext_resource type="Material" uid="uid://du00ycirabnka" path="res://Materials/Ground Cover Material.tres" id="1_ewgg3"]
 [ext_resource type="Texture2D" uid="uid://mm4jkrj7gf30" path="res://Materials/Packed Textures/esther-sand-1_packed_albedo_height.png" id="1_wux7i"]
+[ext_resource type="PackedScene" uid="uid://dtc8l0qljkiaa" path="res://Assets/Elsa/elsa_wild_bush_b_a.tscn" id="3_jyits"]
 [ext_resource type="Texture2D" uid="uid://dlrwosyyeivbn" path="res://Materials/Packed Textures/esther_grass_1_packed_albedo_height.png" id="3_wux7i"]
 [ext_resource type="Texture2D" uid="uid://dsvh4rdnsbkl5" path="res://Materials/Packed Textures/esther-rock-4-packed_albedo_height.png" id="4_2dm88"]
+[ext_resource type="PackedScene" uid="uid://dw47o4l64hqrl" path="res://Assets/Elsa/elsa_wild_bush_b_b.tscn" id="4_vq32e"]
 
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_2285x"]
 name = "Wild Grass"
 scene_file = ExtResource("1_2dm88")
 cast_shadows = 0
 material_override = ExtResource("1_ewgg3")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_l7qgs"]
+name = "elsa_wild_bush_b_a"
+id = 1
+scene_file = ExtResource("3_jyits")
+height_offset = -0.2
+density = 0.6276884
+cast_shadows = 0
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_vq32e"]
+name = "elsa_wild_bush_b_b"
+id = 2
+scene_file = ExtResource("4_vq32e")
+height_offset = -0.2
+density = 0.62319577
+cast_shadows = 0
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
@@ -80,5 +104,5 @@ detiling_rotation = 0.1
 detiling_shift = 0.1
 
 [resource]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_2285x")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_2285x"), SubResource("Terrain3DMeshAsset_l7qgs"), SubResource("Terrain3DMeshAsset_vq32e")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_2dm88"), SubResource("Terrain3DTextureAsset_l7qgs"), SubResource("Terrain3DTextureAsset_vq32e")])

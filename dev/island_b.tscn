@@ -4,8 +4,8 @@
 [ext_resource type="Terrain3DAssets" uid="uid://wpjan1y6r04f" path="res://dev/Island B Terrain3D/new_terrain_3d_assets.tres" id="2_0rxin"]
 [ext_resource type="Material" uid="uid://c2hnrlghafvu4" path="res://Materials/Ocean Water 3.tres" id="3_0rxin"]
 [ext_resource type="PackedScene" uid="uid://d3w31glnm0j1h" path="res://Assets/Elsa/Wild Grass.tscn" id="4_kymhj"]
-[ext_resource type="Texture2D" uid="uid://c27kc3icyil5k" path="res://Import/Elsa/elsa_environment_set_esther-bush-leaves-1_albedo.png" id="5_ou4ju"]
-[ext_resource type="ArrayMesh" uid="uid://dfts72ugsypjn" path="res://Import/Elsa/elsa-wild-bush-a.res" id="6_3ekgd"]
+[ext_resource type="PackedScene" uid="uid://dtc8l0qljkiaa" path="res://Assets/Elsa/elsa_wild_bush_b_a.tscn" id="5_ou4ju"]
+[ext_resource type="PackedScene" uid="uid://dw47o4l64hqrl" path="res://Assets/Elsa/elsa_wild_bush_b_b.tscn" id="6_3ekgd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_kymhj"]
 size = Vector3(0.5, 1.35, 0.5)
@@ -16,10 +16,6 @@ material = ExtResource("3_0rxin")
 size = Vector2(30000, 30000)
 subdivide_width = 200
 subdivide_depth = 200
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ou4ju"]
-transparency = 1
-albedo_texture = ExtResource("5_ou4ju")
 
 [node name="Island B" type="Node3D" unique_id=322274361]
 
@@ -85,8 +81,11 @@ transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50
 [node name="WildGrass4" parent="Grasses test/Grasses test3" unique_id=286411948 instance=ExtResource("4_kymhj")]
 transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 0.5, 0, 0.5)
 
-[node name="ElsaWildBushA" type="MeshInstance3D" parent="." unique_id=1988080786]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 208, 13.4, 309)
-material_override = SubResource("ORMMaterial3D_ou4ju")
-cast_shadow = 0
-mesh = ExtResource("6_3ekgd")
+[node name="Shrub test" type="Node3D" parent="." unique_id=1373589795]
+visible = false
+
+[node name="ElsaWildBushB-A" parent="Shrub test" unique_id=67587973 instance=ExtResource("5_ou4ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220, 13, 315)
+
+[node name="ElsaWildBushB-B" parent="Shrub test" unique_id=61360521 instance=ExtResource("6_3ekgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220.4, 13, 316.7)
