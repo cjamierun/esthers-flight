@@ -3,7 +3,17 @@
 [ext_resource type="Terrain3DMaterial" uid="uid://uo61huy31c48" path="res://dev/Island B Terrain3D/new_terrain_3d_material.tres" id="1_ulikt"]
 [ext_resource type="Terrain3DAssets" uid="uid://wpjan1y6r04f" path="res://dev/Island B Terrain3D/new_terrain_3d_assets.tres" id="2_0rxin"]
 [ext_resource type="Material" uid="uid://c2hnrlghafvu4" path="res://Materials/Ocean Water 3.tres" id="3_0rxin"]
-[ext_resource type="ArrayMesh" uid="uid://bev36slfimbd3" path="res://Import/Elsa/elsa-tree-1.res" id="3_3ekgd"]
+[ext_resource type="PackedScene" uid="uid://xixj828nuqen" path="res://Assets/Elsa/elsa_birch_a.tscn" id="3_mx1qe"]
+[ext_resource type="Script" uid="uid://c8sll31b85f0c" path="res://addons/proton_scatter/src/scatter.gd" id="5_fb5vo"]
+[ext_resource type="Script" uid="uid://tstx43uulpao" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="6_gtxrx"]
+[ext_resource type="Script" uid="uid://3qmn0bs6tblb" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="7_4m3w2"]
+[ext_resource type="Script" uid="uid://7c5s0j8j3m3o" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="8_a3sub"]
+[ext_resource type="Script" uid="uid://daettwn46n0bk" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="9_xypxl"]
+[ext_resource type="Script" uid="uid://cuy6o7b1e0e6h" path="res://addons/proton_scatter/src/modifiers/relax.gd" id="10_km6t7"]
+[ext_resource type="Script" uid="uid://cn4isrm7ynreq" path="res://addons/proton_scatter/src/modifiers/project_on_geometry.gd" id="11_atgx8"]
+[ext_resource type="Script" uid="uid://dj1fc24jpe7ut" path="res://addons/proton_scatter/src/scatter_item.gd" id="12_arrc6"]
+[ext_resource type="Script" uid="uid://61vqas6yfujx" path="res://addons/proton_scatter/src/scatter_shape.gd" id="13_o3mx4"]
+[ext_resource type="Script" uid="uid://bpdh8lsgy7d7c" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="14_1xbrf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_kymhj"]
 size = Vector3(0.5, 1.35, 0.5)
@@ -15,18 +25,54 @@ size = Vector2(30000, 30000)
 subdivide_width = 200
 subdivide_depth = 200
 
+[sub_resource type="Resource" id="Resource_mx1qe"]
+script = ExtResource("8_a3sub")
+amount = 75
+override_global_seed = true
+restrict_height = true
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_fb5vo"]
+script = ExtResource("9_xypxl")
+position = Vector3(0.15, 0.15, 0.15)
+rotation = Vector3(3, 360, 3)
+scale = Vector3(0.1, 0.1, 0.1)
+override_global_seed = true
+custom_seed = 6
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_gtxrx"]
+script = ExtResource("10_km6t7")
+offset_step = 0.2
+consecutive_step_multiplier = 0.75
+restrict_height = true
+
+[sub_resource type="Resource" id="Resource_4m3w2"]
+script = ExtResource("11_atgx8")
+ray_length = 5.0
+ray_offset = 5.0
+remove_points_on_miss = false
+
+[sub_resource type="Resource" id="Resource_a3sub"]
+script = ExtResource("6_gtxrx")
+stack = Array[ExtResource("7_4m3w2")]([SubResource("Resource_mx1qe"), SubResource("Resource_fb5vo"), SubResource("Resource_gtxrx"), SubResource("Resource_4m3w2")])
+
+[sub_resource type="Resource" id="Resource_g8bsm"]
+script = ExtResource("14_1xbrf")
+radius = 27.679733
+
 [node name="Island B" type="Node3D" unique_id=322274361]
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1940188596]
 data_directory = "res://dev/Island B Terrain3D"
 material = ExtResource("1_ulikt")
 assets = ExtResource("2_0rxin")
+collision_mode = 4
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="Elsa Tree 1 test" type="MeshInstance3D" parent="." unique_id=2106513493]
+[node name="Elsa Tree 1 test" parent="." unique_id=306304704 instance=ExtResource("3_mx1qe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.7, 12.2, 320.6)
-mesh = ExtResource("3_3ekgd")
 
 [node name="TestEsther" type="MeshInstance3D" parent="." unique_id=321188079]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.7, 12.5, 320.6)
@@ -36,3 +82,37 @@ mesh = SubResource("BoxMesh_kymhj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 10, 150)
 mesh = SubResource("PlaneMesh_ulikt")
 metadata/_edit_lock_ = true
+
+[node name="ProtonScatter" type="Node3D" parent="." unique_id=761080275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 211, 12.8, 312)
+script = ExtResource("5_fb5vo")
+modifier_stack = SubResource("Resource_a3sub")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+metadata/_custom_type_script = "uid://c8sll31b85f0c"
+
+[node name="ScatterShape" type="Node3D" parent="ProtonScatter" unique_id=2086303729]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("13_o3mx4")
+shape = SubResource("Resource_g8bsm")
+
+[node name="Birch" type="Node3D" parent="ProtonScatter" unique_id=85732514]
+script = ExtResource("12_arrc6")
+proportion = 30
+source_ignore_position = false
+path = "uid://xixj828nuqen"
+
+[node name="Holly oak A" type="Node3D" parent="ProtonScatter" unique_id=776854928]
+script = ExtResource("12_arrc6")
+path = "uid://uug1f0e75kcw"
+metadata/_custom_type_script = "uid://dj1fc24jpe7ut"
+
+[node name="Holly oak B" type="Node3D" parent="ProtonScatter" unique_id=1501027387]
+script = ExtResource("12_arrc6")
+path = "uid://gr850t7gq3dk"
+metadata/_custom_type_script = "uid://dj1fc24jpe7ut"
+
+[node name="Holly oak C" type="Node3D" parent="ProtonScatter" unique_id=1109688923]
+script = ExtResource("12_arrc6")
+path = "uid://c35s1eb6abkcf"
+metadata/_custom_type_script = "uid://dj1fc24jpe7ut"

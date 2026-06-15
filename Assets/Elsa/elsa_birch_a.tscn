@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xixj828nuqen"]
+
+[ext_resource type="ArrayMesh" uid="uid://bev36slfimbd3" path="res://Import/Elsa/elsa-tree-1.res" id="1_e1ebq"]
+[ext_resource type="Material" uid="uid://djfl56tvxp44m" path="res://Materials/Elsa-Birch-Bark-Material.tres" id="2_bvkj3"]
+[ext_resource type="Material" uid="uid://d1vcmnkxuff5f" path="res://Materials/elsa-leaves-1-material.tres" id="3_jxnx5"]
+
+[node name="Node3D" type="Node3D" unique_id=829810857]
+
+[node name="Elsa Tree 1 test" type="MeshInstance3D" parent="." unique_id=306304704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+mesh = ExtResource("1_e1ebq")
+surface_material_override/0 = ExtResource("2_bvkj3")
+surface_material_override/1 = ExtResource("3_jxnx5")

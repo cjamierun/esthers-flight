@@ -92,6 +92,33 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://Import/Elsa/elsa-tree-1.res",
 "save_to_file/path": "uid://bev36slfimbd3"
+},
+"Elsa set_tree_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Import/Elsa/elsa-holly-oak-b.res",
+"save_to_file/path": "uid://c1cc5htg0ae8h"
+},
+"Elsa set_tree_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Import/Elsa/elsa-holly-oak-a.res",
+"save_to_file/path": "uid://cgewb52kk777o"
+},
+"Elsa set_tree_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Import/Elsa/elsa-holly-oak-c.res",
+"save_to_file/path": "uid://oadfx1pgfb"
 }
 },
 "nodes": {

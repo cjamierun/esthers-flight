@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dabjjantpxyif"]
+
+[ext_resource type="Texture2D" uid="uid://bpawkc77j1707" path="res://Import/Elsa/elsa_environment_set_esther-holly-oak-bark_albedo.png" id="1_umb7f"]
+
+[resource]
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_umb7f")
+backlight = Color(1, 1, 1, 1)

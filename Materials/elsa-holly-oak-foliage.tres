@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dkl8n8gruph6b"]
+
+[ext_resource type="Texture2D" uid="uid://donq270wcxnhy" path="res://Import/Elsa/elsa_environment_set_esther-holly-oak-foliage_albedo.png" id="1_yy78g"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.061
+alpha_antialiasing_mode = 2
+alpha_antialiasing_edge = 0.3
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_yy78g")
+backlight = Color(0.8556, 0.93, 0.63240004, 1)

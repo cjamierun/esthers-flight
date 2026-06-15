@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://gr850t7gq3dk"]
+
+[ext_resource type="ArrayMesh" uid="uid://be6cdcgp53sr7" path="res://Import/Elsa/elsa-holly-oak-b.res" id="1_ie0dt"]
+[ext_resource type="Material" uid="uid://dabjjantpxyif" path="res://Materials/elsa-holly-oak-bark.tres" id="2_dflds"]
+[ext_resource type="Material" uid="uid://dkl8n8gruph6b" path="res://Materials/elsa-holly-oak-foliage.tres" id="3_4qo5q"]
+
+[node name="Elsa Holly Oak B" type="Node3D" unique_id=798935007]
+
+[node name="ElsaHollyOakB" type="MeshInstance3D" parent="." unique_id=1886474488]
+mesh = ExtResource("1_ie0dt")
+surface_material_override/0 = ExtResource("2_dflds")
+surface_material_override/1 = ExtResource("3_4qo5q")
