@@ -95,6 +95,16 @@ script = ExtResource("17_4m3w2")
 size = Vector3(104.55524, 1, 74.43671)
 metadata/_custom_type_script = "uid://bbjimjtksonvn"
 
+[sub_resource type="Resource" id="Resource_iwx2c"]
+script = ExtResource("14_1xbrf")
+radius = 20.0
+metadata/_custom_type_script = "uid://bpdh8lsgy7d7c"
+
+[sub_resource type="Resource" id="Resource_pkmrf"]
+script = ExtResource("14_1xbrf")
+radius = 20.0
+metadata/_custom_type_script = "uid://bpdh8lsgy7d7c"
+
 [node name="Island B" type="Node3D" unique_id=322274361]
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1940188596]
@@ -163,7 +173,20 @@ metadata/_custom_type_script = "uid://c8sll31b85f0c"
 script = ExtResource("12_arrc6")
 path = "uid://b4egbvxk6rsi5"
 
-[node name="ScatterShape" type="Node3D" parent="Devtown A" unique_id=1844875917]
-transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -9, 0, 11)
+[node name="Town Area" type="Node3D" parent="Devtown A" unique_id=1844875917]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -32, 0, 11)
 script = ExtResource("13_o3mx4")
 shape = SubResource("Resource_1xbrf")
+
+[node name="Outcrop" type="Node3D" parent="Devtown A" unique_id=1175466882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 6)
+script = ExtResource("13_o3mx4")
+shape = SubResource("Resource_iwx2c")
+metadata/_custom_type_script = "uid://61vqas6yfujx"
+
+[node name="Piazza" type="Node3D" parent="Devtown A" unique_id=173030263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 5)
+script = ExtResource("13_o3mx4")
+negative = true
+shape = SubResource("Resource_pkmrf")
+metadata/_custom_type_script = "uid://61vqas6yfujx"
