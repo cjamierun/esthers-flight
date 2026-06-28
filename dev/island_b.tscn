@@ -14,6 +14,9 @@
 [ext_resource type="Script" uid="uid://dj1fc24jpe7ut" path="res://addons/proton_scatter/src/scatter_item.gd" id="12_arrc6"]
 [ext_resource type="Script" uid="uid://61vqas6yfujx" path="res://addons/proton_scatter/src/scatter_shape.gd" id="13_o3mx4"]
 [ext_resource type="Script" uid="uid://bpdh8lsgy7d7c" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="14_1xbrf"]
+[ext_resource type="Script" uid="uid://bgljmo8y0qna6" path="res://addons/proton_scatter/src/modifiers/create_inside_grid.gd" id="15_gtxrx"]
+[ext_resource type="Script" uid="uid://chqkjc2poc7yc" path="res://addons/proton_scatter/src/modifiers/snap_transforms.gd" id="16_4m3w2"]
+[ext_resource type="Script" uid="uid://bbjimjtksonvn" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="17_4m3w2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_kymhj"]
 size = Vector3(0.5, 1.35, 0.5)
@@ -61,6 +64,37 @@ stack = Array[ExtResource("7_4m3w2")]([SubResource("Resource_mx1qe"), SubResourc
 script = ExtResource("14_1xbrf")
 radius = 27.679733
 
+[sub_resource type="Resource" id="Resource_xypxl"]
+script = ExtResource("15_gtxrx")
+spacing = Vector3(20, 0.05, 20)
+restrict_height = true
+
+[sub_resource type="Resource" id="Resource_km6t7"]
+script = ExtResource("9_xypxl")
+rotation = Vector3(0, 360, 0)
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_arrc6"]
+script = ExtResource("16_4m3w2")
+position_step = Vector3(0, 1, 0)
+rotation_step = Vector3(90, 90, 90)
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_atgx8"]
+script = ExtResource("11_atgx8")
+ray_length = 5.0
+ray_offset = 5.0
+remove_points_on_miss = false
+
+[sub_resource type="Resource" id="Resource_o3mx4"]
+script = ExtResource("6_gtxrx")
+stack = Array[ExtResource("7_4m3w2")]([SubResource("Resource_xypxl"), SubResource("Resource_km6t7"), SubResource("Resource_arrc6"), SubResource("Resource_atgx8")])
+
+[sub_resource type="Resource" id="Resource_1xbrf"]
+script = ExtResource("17_4m3w2")
+size = Vector3(104.55524, 1, 74.43671)
+metadata/_custom_type_script = "uid://bbjimjtksonvn"
+
 [node name="Island B" type="Node3D" unique_id=322274361]
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1940188596]
@@ -83,7 +117,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 10, 150)
 mesh = SubResource("PlaneMesh_ulikt")
 metadata/_edit_lock_ = true
 
-[node name="ProtonScatter" type="Node3D" parent="." unique_id=761080275]
+[node name="Forest A" type="Node3D" parent="." unique_id=761080275]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 211, 12.8, 312)
 script = ExtResource("5_fb5vo")
 modifier_stack = SubResource("Resource_a3sub")
@@ -91,28 +125,45 @@ Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 metadata/_custom_type_script = "uid://c8sll31b85f0c"
 
-[node name="ScatterShape" type="Node3D" parent="ProtonScatter" unique_id=2086303729]
+[node name="ScatterShape" type="Node3D" parent="Forest A" unique_id=2086303729]
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 script = ExtResource("13_o3mx4")
 shape = SubResource("Resource_g8bsm")
 
-[node name="Birch" type="Node3D" parent="ProtonScatter" unique_id=85732514]
+[node name="Birch" type="Node3D" parent="Forest A" unique_id=85732514]
 script = ExtResource("12_arrc6")
 proportion = 30
 source_ignore_position = false
 path = "uid://xixj828nuqen"
 
-[node name="Holly oak A" type="Node3D" parent="ProtonScatter" unique_id=776854928]
+[node name="Holly oak A" type="Node3D" parent="Forest A" unique_id=776854928]
 script = ExtResource("12_arrc6")
 path = "uid://uug1f0e75kcw"
 metadata/_custom_type_script = "uid://dj1fc24jpe7ut"
 
-[node name="Holly oak B" type="Node3D" parent="ProtonScatter" unique_id=1501027387]
+[node name="Holly oak B" type="Node3D" parent="Forest A" unique_id=1501027387]
 script = ExtResource("12_arrc6")
 path = "uid://gr850t7gq3dk"
 metadata/_custom_type_script = "uid://dj1fc24jpe7ut"
 
-[node name="Holly oak C" type="Node3D" parent="ProtonScatter" unique_id=1109688923]
+[node name="Holly oak C" type="Node3D" parent="Forest A" unique_id=1109688923]
 script = ExtResource("12_arrc6")
 path = "uid://c35s1eb6abkcf"
 metadata/_custom_type_script = "uid://dj1fc24jpe7ut"
+
+[node name="Devtown A" type="Node3D" parent="." unique_id=650679589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164, 20, 141)
+script = ExtResource("5_fb5vo")
+modifier_stack = SubResource("Resource_o3mx4")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+metadata/_custom_type_script = "uid://c8sll31b85f0c"
+
+[node name="ScatterItem" type="Node3D" parent="Devtown A" unique_id=429863237]
+script = ExtResource("12_arrc6")
+path = "uid://b4egbvxk6rsi5"
+
+[node name="ScatterShape" type="Node3D" parent="Devtown A" unique_id=1844875917]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -9, 0, 11)
+script = ExtResource("13_o3mx4")
+shape = SubResource("Resource_1xbrf")
